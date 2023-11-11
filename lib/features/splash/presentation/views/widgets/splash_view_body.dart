@@ -1,10 +1,9 @@
 
 
 import 'package:book_app/core/utils/app_assets.dart';
-import 'package:book_app/core/utils/app_router.dart';
+import 'package:book_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'sliding_text.dart';
 
 class SplashViewbody extends StatefulWidget {
@@ -66,7 +65,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        GoRouter.of(context).push(AppRouter.kHomeView);
+       Navigator.pushReplacementNamed(context, HomeView.routeName);
       },
     );
   }

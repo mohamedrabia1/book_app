@@ -1,4 +1,5 @@
 import 'package:book_app/core/utils/app_assets.dart';
+import 'package:book_app/features/search/presentation/view/search_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -13,7 +14,9 @@ class CustomAppBar extends StatelessWidget {
            children: [
              Image.asset(AppAssets.splash,height: 20),
              Spacer(),
-             IconButton(onPressed: (){}, icon: Icon(Icons.search_rounded))
+             IconButton(onPressed: (){
+               Navigator.pushNamed(context, SearchView.routeName);
+             }, icon: Icon(Icons.search_rounded))
            ],
         ),
       )
